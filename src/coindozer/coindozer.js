@@ -244,9 +244,12 @@ const CoinDozerGame = () => {
     <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
       <div ref={mountRef} />
       <div style={{
+        alignItems: 'center', // This centers children vertically in the container
+        justifyContent: 'center', // This centers children horizontally in the container
         position: 'absolute',
-        top: '10px',
-        left: '10px',
+        bottom: '2px',
+        left: 0, // Ensure it spans full width if you want to center horizontally
+        right: 0, // Ensure it spans full width if you want to center horizontally
         background: 'rgba(255, 255, 255, 0.7)',
         padding: '10px',
         borderRadius: '5px'
@@ -258,7 +261,6 @@ const CoinDozerGame = () => {
         }}>
           Spawn Coin
         </button>
-        <p>Coins: {coinCount}</p>
       </div>
     </div>
   );
